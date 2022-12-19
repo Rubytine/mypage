@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>매갱이의 2023년 버킷리스트</title>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap');
 
@@ -13,16 +14,116 @@
             font-family: 'IBM Plex Sans KR', sans-serif;
         }
 
+        html {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bucketbox {
+            width: 160px;
+            height: 180px;
+
+            background-size: cover;
+            background-position: center;
+
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .bucket {
+            width: 160px;
+            height: 160px;
+
+            /*background-size: cover;
+            margin: 8px;
+            background-position: center;
+
+            position: relative;*/
+
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            word-break: keep-all;
+        }
+
+        .bucket_list.column {
+            flex-flow: column wrap;
+        }
+
+        .titlebox {
+            width: 130px;
+            text-align: center;
+            background-color: royalblue;
+            color: white;
+            font-weight: 130;
+
+            padding: 2px 7px;
+            border-radius: 6px;
+        }
+
+        .img1 {
+            background-image: url(/image/동물귀\ 두상_현제.png);
+            color: black;
+        }
+
+        .img2 {
+            background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-lightred.png");
+            color: tomato;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .done::after {
+            content: "";
+            width: 130px;
+            height: 130px;
+            background-image: url(/image/rubydone.png);
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 20%;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .msg {
+            margin: -10px 0 30px;
+            color: black;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
         .title {
             color: white;
-            background-color: tomato;
+            background-color: royalblue;
             font-size: 24px;
             padding: 4px 14px;
             border-radius: 8px;
         }
 
         .bg {
-            width: 360px;
+            width: 720px;
             background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bg-grid.png");
         }
 
@@ -30,13 +131,8 @@
             font-weight: bold;
         }
 
-        .bucket {
-            width: 160px;
-            height: 160px;
-        }
-
         .img1 {
-            background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-red.png");
+            background-image: url(/image/동물귀\ 두상_현제.png);
             background-size: cover;
             background-position: center;
         }
@@ -47,22 +143,73 @@
             background-position: center;
         }
     </style>
-    <link rel="stylesheet" type="text/css" href="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/sparta-bucket2.css">
+
 </head>
 
 <body class="bg center">
     <h1 class="title">2023 신년계획</h1>
     <p class="msg">2023 가보자고!</p>
     <div class="row flex-row wrap">
-        <div class="bucket img1 center ruby_done">언리얼4 정복하기</div>
-        <div class="bucket img2 center">몸무게 앞자리 수 바꾸기</div>
-        <div class="bucket img2 center">운전면허 따기</div>
-        <div class="bucket img1 center">계획대로 행동하기</div>
-        <div class="bucket img1 center">HTML CSS 공부하기</div>
-        <div class="bucket img2 center">정한 시간에 일어나기</div>
-        <div class="bucket img1 center">일정 꾸준히 기록하기</div>
+        <div class="bucket_list.column">
+            <li class="bucketbox center">
+                <div class="bucket img1 center"></div>
+                <div class="titlebox">언리얼4 정복하기</div>
+            </li>
+        </div>
+        <div class="bucket_list.column">
+            <li class="bucketbox">
+                <div class="bucket img1 center"></div>
+                <div class="titlebox">몸무게 앞자리 5로</div>
+            </li>
+        </div>
     </div>
 
+    <div class="row flex-row wrap">
+        <div class="bucket_list.column">
+            <li class="bucketbox">
+                <div class="bucket img1 center"></div>
+                <div class="titlebox">운전면허 따기</div>
+            </li>
+        </div>
+        <div class="bucket_list.column">
+            <li class="bucketbox">
+                <div class="bucket img1 center"></div>
+                <div class="titlebox">외적인 면 가꾸기</div>
+            </li>
+        </div>
+    </div>
+
+    <div class="row flex-row wrap">
+        <div class="bucket_list.column">
+            <li class="bucketbox">
+                <div class="bucket img1 center"></div>
+                <div class="titlebox">계획대로 행동하기</div>
+            </li>
+        </div>
+        <div class="bucket_list.column">
+            <li class="bucketbox">
+                <div class="bucket img1 center"></div>
+                <div class="titlebox">HTML CSS 공부</div>
+            </li>
+        </div>
+    </div>
+
+    <div class="row flex-row wrap">
+        <div class="bucket_list.column">
+            <li class="bucketbox">
+                <div class="bucket img1 center"></div>
+                <div class="titlebox">일정 시간에 기상</div>
+            </li>
+        </div>
+        <div class="bucket_list.column">
+            <li class="bucketbox">
+                <div class="bucket img1 center"></div>
+                <div class="titlebox">꾸준히 기록하기</div>
+            </li>
+        </div>
+    </div>
+    <div class="warnning center"><br><br>사용된 이미지들은 별도의 저작권이 있는 이미지 입니다.</div>
+    <div class="warnning2 center">함부로 가져다 사용하면 처벌받습니다.</div>
 </body>
 
 </html>
